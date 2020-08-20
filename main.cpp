@@ -46,10 +46,12 @@ int operations(int i, int in1, int in2, int op){
 
 }
 
+
+
 int main()
 {
     //Обозначение глобалных переменных
-    int inumb [100];
+    int inumb [2];
     long int onumb;
     int i = 0, operation;
     bool start = 1 ;
@@ -74,31 +76,27 @@ int main()
         cout<<"Operation№ ";
         cin>>operation;
 
-
         switch(operation){
         case 1:
             inumb[0]=operations(i,inumb[0],inumb[i],operation);
-            i++;
             break;
 
         case 2:
             inumb[0]=operations(i,inumb[0],inumb[i],operation);
-            i++;
             break;
 
         case 3:
             inumb[0]=operations(i,inumb[0],inumb[i],operation);
-            i++;
             break;
 
         case 4:
             inumb[0]=operations(i,inumb[0],inumb[i],operation);
-            i++;
             break;
+
         case 5:
             inumb[0]=operations(i,inumb[0],inumb[i],operation);
-            i++;
             break;
+
         case 6:
             onumb=inumb[0];
             cout<<"Answer: "<<onumb<<endl;
