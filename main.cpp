@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+
 using namespace std;
 
 /* Functions */
@@ -7,23 +8,33 @@ using namespace std;
 //Функция, отвечающая за простейшие математические операции
 int operations(int i, int in1, int in2, int op){
 
-    cout<<"Введите число: ";
-    cin>> in2;
     switch(op){
         case 1:
+            cout<<"Введите число: ";
+            cin>> in2;
             in1 = in1 + in2;
             break;
 
         case 2:
+            cout<<"Введите число: ";
+            cin>> in2;
             in1 = in1 - in2;
             break;
 
         case 3:
+            cout<<"Введите число: ";
+            cin>> in2;
             in1 = in1 * in2;
             break;
 
         case 4:
+            cout<<"Введите число: ";
+            cin>> in2;
             in1 = in1 / in2;
+            break;
+
+        case 5:
+            in1= sqrt(in1);
             break;
 
         default:
@@ -47,6 +58,7 @@ int main()
     cout<<"Введите число: ";
     cin>>inumb[0];
     i++;
+
     // Main цикл
     while(start != 0){
 
@@ -55,7 +67,8 @@ int main()
         cout<<"2)Вычитание"<<endl;
         cout<<"3)Умножение"<<endl;
         cout<<"4)Деление"<<endl;
-        cout<<"5)Посчитать"<<endl;
+        cout<<"5)Кв.Корень"<<endl;
+        cout<<"6)Посчитать"<<endl;
         cout<<"0)Выход"<<endl;
 
         cout<<"Operation№ ";
@@ -82,8 +95,11 @@ int main()
             inumb[0]=operations(i,inumb[0],inumb[i],operation);
             i++;
             break;
-
         case 5:
+            inumb[0]=operations(i,inumb[0],inumb[i],operation);
+            i++;
+            break;
+        case 6:
             onumb=inumb[0];
             cout<<"Answer: "<<onumb<<endl;
             start = 0;
