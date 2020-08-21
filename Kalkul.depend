@@ -1,5 +1,20 @@
 # depslib dependency file v1.0
-1597932249 source:/home/left/projects/Kalkul/main.cpp
+1598031407 source:/home/left/projects/Kalkul/main.cpp
 	<iostream>
+	<math.h>
+	<Calculator.h>
+
+1598029942 /home/left/projects/Kalkul/include/Calculator.hpp
+	<math.h>
+
+1598030955 source:/home/left/projects/Kalkul/src/Calculator.cpp
+	"Calculator.h"
+	<math.h>
+	<exception>
+
+1598029942 /home/left/projects/Kalkul/src/Calculator.hpp
+	<math.h>
+
+1598031282 /home/left/projects/Kalkul/include/Calculator.h
 	<math.h>
 

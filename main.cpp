@@ -1,106 +1,31 @@
 #include <iostream>
 #include <math.h>
-using namespace std;
-
-/* Functions */
-
-//Функция, отвечающая за простейшие математические операции
-int operations(int i, int in1, int in2, int op){
-
-    cout<<"Введите число: ";
-    cin>> in2;
-    switch(op){
-        case 1:
-            in1 = in1 + in2;
-            break;
-
-        case 2:
-            in1 = in1 - in2;
-            break;
-
-        case 3:
-            in1 = in1 * in2;
-            break;
-
-        case 4:
-            in1 = in1 / in2;
-            break;
-
-        default:
-            break;
-    }
-
-    //cout<<"Ответ: "<<inumb[0]<<endl;
-    return in1;
-
-}
+#include <Calculator.h>
 
 int main()
 {
-    //Обозначение глобалных переменных
-    int inumb [100];
-    long int onumb;
-    int i = 0, operation;
-    bool start = 1 ;
+    Calculator oleg;
+    try{
+    while(1)
+        {
+            double in1,in2;
+            char op;
 
-    //Ввод первого числа
-    cout<<"Введите число: ";
-    cin>>inumb[0];
-    i++;
-    // Main цикл
-    while(start != 0){
+            std::cin>>in1;
+            std::cin>>op;
 
-        cout<<"Выберите операцию:"<<endl;
-        cout<<"1)Сложение"<<endl;
-        cout<<"2)Вычитание"<<endl;
-        cout<<"3)Умножение"<<endl;
-        cout<<"4)Деление"<<endl;
-        cout<<"5)Посчитать"<<endl;
-        cout<<"0)Выход"<<endl;
+            if(op == 'q' || op == 'Q')
+                break;
 
-        cout<<"Operation№ ";
-        cin>>operation;
-
-
-        switch(operation){
-        case 1:
-            inumb[0]=operations(i,inumb[0],inumb[i],operation);
-            i++;
-            break;
-
-        case 2:
-            inumb[0]=operations(i,inumb[0],inumb[i],operation);
-            i++;
-            break;
-
-        case 3:
-            inumb[0]=operations(i,inumb[0],inumb[i],operation);
-            i++;
-            break;
-
-        case 4:
-            inumb[0]=operations(i,inumb[0],inumb[i],operation);
-            i++;
-            break;
-
-        case 5:
-            onumb=inumb[0];
-            cout<<"Answer: "<<onumb<<endl;
-            start = 0;
-            exit(0);
-        case 0:
-            start = 0;
-            cout<<"Good bye!"<<endl;
-            break;
-
-        default:
-            start = 0;
-            cout<<"Sorry, you was kicked :("<<endl;
-            break;
-
+            if(op == '^' || op == '&'){
+                std::cout << oleg.calculate(in1,op) << std::endl;
+                continue;
+            }
+            std::cin>>in2;
+            std::cout << oleg.calculate(in1,op,in2) << std::endl;
         }
-        cout<<endl;
-
+    }catch(...){
+        std::cout << "wrong data!\n";
     }
 
     return 0;
